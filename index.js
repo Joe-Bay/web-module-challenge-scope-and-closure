@@ -108,13 +108,20 @@ Final Score: 6 - 10 */
 
 function scoreboard(inning, numInnings) {
   let score = {Home: 0, Away: 0};
-  for(let i = 0; i < numInnings; i++){
-    if(i = 0){
+  for(let i = 1; i < numInnings + 1; i++){
+    score.Home += inning();
+    score.Away += inning();
+    if(i === 1){
       console.log(`${i}st inning: ${score.Home} - ${score.Away}`);
-    }else if(i = 1){
+    }else if(i === 2){
       console.log(`${i}nd inning: ${score.Home} - ${score.Away}`);
+    }else if(i === 3){
+      console.log(`${i}rd inning: ${score.Home} - ${score.Away}`);
+    }else{
+      console.log(`${i}th inning: ${score.Home} - ${score.Away}`);
     }
   }
+  return console.log(`Final Score: ${score.Home} - ${score.Away}`);
 }
-
+scoreboard(inning, 9);
 
